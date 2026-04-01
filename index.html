@@ -1,22 +1,57 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>MISS KOBAYASHI'S WEB</title>
+  <title>我的第一个网页</title>
   <style>
     body {
       margin: 0;
       min-height: 100vh;
-      background: rgba(255, 182, 193, 0.35); /* 樱花粉 + 35% 透明度 */
+      background:
+        linear-gradient(rgba(255, 160, 122, 0.2), rgba(255, 160, 122, 0.2)),
+        url("https://pub-141831e61e69445289222976a15b6fb3.r2.dev/Image_to_url_V2/D2E9890A9247E7429C260EAF99855182-imagetourl.cloud-1775056153373-lln778.png") top center/contain no-repeat;
+      background-blend-mode: overlay;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: Arial, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(rgba(255, 160, 122, 0.2), rgba(255, 160, 122, 0.2)),
+        url("https://pub-141831e61e69445289222976a15b6fb3.r2.dev/Image_to_url_V2/D2E9890A9247E7429C260EAF99855182-imagetourl.cloud-1775056153373-lln778.png") top center/contain no-repeat;
+      background-blend-mode: overlay;
+      filter: blur(8px);
+      z-index: -1;
+    }
+    img {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      width: 25%;
+      height: 25%;
+      object-fit: cover;
+    }
+    .link-below-image {
+      position: absolute;
+      top: calc(50px + 25vh);
+      left: 50px;
+      font-family: Arial, sans-serif;
+      color: blue;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <p>小林侑子</p>
-  <h2>？？？？？？？？</h2>
+  <img src="https://pub-141831e61e69445289222976a15b6fb3.r2.dev/Image_to_url_V2/011DBE0CFED57BA9EB704009D5954B9D-imagetourl.cloud-1775054712719-wusm1f.jpg" alt="嵌入图片">
+  <a href="relations.html" class="link-below-image">角色的人际关系</a>
 </body>
 </html>
 
